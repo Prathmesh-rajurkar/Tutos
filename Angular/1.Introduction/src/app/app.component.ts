@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '1.Introduction';
+  inputText: string = '';
+
+  message: string = 'This is Dangerous Message';
+  classes: string = 'danger text-size';
 }
