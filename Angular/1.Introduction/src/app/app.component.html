@@ -1,4 +1,16 @@
-<input type="text" [(ngModel)]="inputText" placeholder="Enter your name" />
-<p>you entered : {{ inputText }}</p>
+<div *ngIf="isLoggedIn; else loggedOut">
+  <h1>Welcome, {{ username }}!</h1>
+</div>
+<ng-template #loggedOut>
+  <h1>Please log in.</h1>
+</ng-template>
 
-<div [ngClass]="classes">{{ message }}</div>
+<ul>
+  <li *ngFor="let name of names; let i = index">{{i}} {{ name }}</li>
+</ul>
+
+<div [ngSwitch] = "grade">
+    <p *ngSwitchCase = "'A'">Excellent</p>
+    <p *ngSwitchCase = "'B'">Good</p>
+    <p *ngSwitchDefault>Unknown</p>
+</div>

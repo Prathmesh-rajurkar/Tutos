@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '1.Introduction';
-  inputText: string = '';
-
-  message: string = 'This is Dangerous Message';
-  classes: string = 'danger text-size';
-}
+  isLoggedIn:boolean = false;
+  username:string = 'John Doe';
+  names:string[] = ['Alice', 'Bob', 'Charlie', 'David', 'Eve'];
+  grade:string = 'A';
+ }
