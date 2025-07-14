@@ -1,16 +1,8 @@
-<div *ngIf="isLoggedIn; else loggedOut">
-  <h1>Welcome, {{ username }}!</h1>
-</div>
-<ng-template #loggedOut>
-  <h1>Please log in.</h1>
-</ng-template>
-
-<ul>
-  <li *ngFor="let name of names; let i = index">{{i}} {{ name }}</li>
-</ul>
-
-<div [ngSwitch] = "grade">
-    <p *ngSwitchCase = "'A'">Excellent</p>
-    <p *ngSwitchCase = "'B'">Good</p>
-    <p *ngSwitchDefault>Unknown</p>
+<div>
+    <h4>All Todos</h4>
+    <div *ngFor = "let post of posts" class="post">
+        <p>{{post.title}}</p>
+        <p *ngIf = "post.completed">✅</p>
+        <p *ngIf = "!   post.completed">❌</p>
+    </div>
 </div>
